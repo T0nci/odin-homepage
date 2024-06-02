@@ -167,9 +167,10 @@ main > section h1 {
 }
 
 @media screen and (max-width: 900px) {
-  .about-me > .content > h1 {
-    padding-top: 3.5rem;
-    text-align: center;
+  .about-me .image > header {
+    bottom: auto;
+    top: 1.5rem;
+    right: -80%;
   }
 
   .about-me > .content {
@@ -177,10 +178,9 @@ main > section h1 {
     margin-left: 2rem;
   }
 
-  .about-me .image > header {
-    bottom: auto;
-    top: 1.5rem;
-    right: -80%;
+  .about-me > .content > h1 {
+    padding-top: 3.5rem;
+    text-align: center;
   }
 
   .about-me > .content > *:not(.icons) {
