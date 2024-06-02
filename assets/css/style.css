@@ -113,7 +113,6 @@ main > section h1 {
 
 .about-me .image {
   position: relative;
-  width: fit-content;
   float: left;
   margin-right: 1rem;
 }
@@ -170,6 +169,7 @@ main > section h1 {
 @media screen and (max-width: 900px) {
   .about-me > .content > h1 {
     padding-top: 3.5rem;
+    text-align: center;
   }
 
   .about-me > .content {
@@ -178,6 +178,7 @@ main > section h1 {
   }
 
   .about-me .image > header {
+    bottom: auto;
     top: 1.5rem;
     right: -80%;
   }
@@ -188,5 +189,43 @@ main > section h1 {
 }
 
 @media screen and (max-width: 700px) {
-  
+  main > section {
+    padding: 1rem;
+  }
+
+  .about-me .image > header {
+    top: auto;
+    right: auto;
+    bottom: 0.5rem;
+  }
+
+  .about-me .image {
+    float: none;
+    max-width: 350px;
+    margin: 0 auto 1rem;
+  }
+
+  .about-me img {
+    width: 100%; /* it synchros with .image max-width */
+    /* so the img shrinks(doesn't work with picture element because */
+    /* the img src gets changed and not the picture element) */
+  }
+
+  .about-me > .content {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 0.5rem;
+  }
+
+  .about-me > .content > *:not(.icons) {
+    margin-bottom: 0.75rem;
+  }
+
+  .about-me > .content > h1 {
+    padding-top: 0;
+  }
+
+  .about-me .icons {
+    justify-content: center;
+  }
 }
