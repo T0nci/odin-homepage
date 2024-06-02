@@ -84,14 +84,14 @@ body {
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 
-  position: relative; /* For the ::before - part of .about-me section */
+  position: relative; /* For the ::before part of .about-me section */
 }
 
 main > section {
-  padding: 4rem 3rem;
+  padding: 2rem 3rem;
 }
 
 main > section h1 {
@@ -111,15 +111,11 @@ main > section h1 {
   transform: skewY(-11deg) translateY(-6rem);
 }
 
-.about-me > .content {
-  background-color: #FFFFFF;
-}
-
 .about-me .image {
   position: relative;
   width: fit-content;
   float: left;
-  transform: translate(-1rem, -1.5rem);
+  margin-right: 1rem;
 }
 
 .about-me .image > header {
@@ -135,7 +131,7 @@ main > section h1 {
 }
 
 .about-me img {
-  max-width: 500px;
+  width: 350px;
   height: auto;
 }
 
@@ -143,6 +139,7 @@ main > section h1 {
   background-color: #FFFFFF;
   box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
   padding: 2rem 1.75rem;
+  margin-top: 2rem;
 }
 
 .about-me > .content > *:not(.icons) {
@@ -172,4 +169,26 @@ main > section h1 {
   height: 20px;
 }
 
-/* 500, 900 Breakpoints */
+@media screen and (max-width: 900px) {
+  .about-me > .content > h1 {
+    padding-top: 3.5rem;
+  }
+
+  .about-me > .content {
+    margin-top: 5rem;
+    margin-left: 2rem;
+  }
+
+  .about-me .image > header {
+    top: 1.5rem;
+    right: -80%;
+  }
+
+  .about-me > .content > *:not(.icons) {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  
+}
