@@ -66,4 +66,110 @@ meter {
 * {
 	box-sizing: border-box;
 }
-/* End of Custom reset*/
+/* End of Custom reset */
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(../fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #FFFFFF;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+
+  position: relative; /* For the ::before - part of .about-me section */
+}
+
+main > section {
+  padding: 4rem 3rem;
+}
+
+main > section h1 {
+  font-family: "Playfair Display", sans-serif;
+  font-size: 2rem;
+}
+
+.about-me::before {
+  content: "";
+  background-color: #0891b2;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  transform: skewY(-11deg) translateY(-6rem);
+}
+
+.about-me > .content {
+  background-color: #FFFFFF;
+}
+
+.about-me .image {
+  position: relative;
+  width: fit-content;
+  float: left;
+  transform: translate(-1rem, -1.5rem);
+}
+
+.about-me .image > header {
+  color: white;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 2.75rem;
+  text-align: center;
+
+  width: 100%;
+  position: absolute;
+  bottom: 0.5rem;
+  z-index: 10;
+}
+
+.about-me img {
+  max-width: 500px;
+  height: auto;
+}
+
+.about-me > .content {
+  background-color: #FFFFFF;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  padding: 2rem 1.75rem;
+}
+
+.about-me > .content > *:not(.icons) {
+  margin-bottom: 2rem;
+}
+
+.about-me > .content > p {
+  line-height: 1.5;
+  color: #5a5a5a;
+}
+
+.about-me .icons {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 1rem;
+}
+
+.about-me .icons > button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+.about-me .icons svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* 500, 900 Breakpoints */
