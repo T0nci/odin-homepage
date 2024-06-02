@@ -158,10 +158,8 @@ main > section h1 {
   gap: 1rem;
 }
 
-.about-me .icons > button {
-  border: none;
-  background-color: transparent;
-  padding: 0;
+.about-me .icons > a {
+  text-decoration: none;
 }
 
 .about-me .icons svg {
