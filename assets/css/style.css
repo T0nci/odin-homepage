@@ -88,17 +88,20 @@ body {
   margin: 0 auto;
 }
 
-main > section {
+main > section,
+footer {
   padding: 2rem 3rem 5rem;
 }
 
 header,
 main > section h1,
-main > section h2 {
+main > section h2,
+footer h1 {
   font-family: "Playfair Display", sans-serif;
 }
 
-main > section h1 {
+main > section h1,
+footer h1 {
   font-size: 2rem;
 }
 
@@ -236,6 +239,59 @@ main > section h1 {
   color: #5a5a5a;
 }
 
+footer {
+  padding-bottom: 2rem;
+  background-color: #0891b2;
+  color: #FFFFFF;
+
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer > .image {
+  max-width: 560px;
+}
+
+footer > .image img {
+  width: 100%;
+  height: auto;
+}
+
+footer .content > *:not(.phone, .icons) {
+  margin-bottom: 1.5rem;
+}
+
+footer .phone {
+  margin-bottom: 1rem;
+}
+
+footer .phone,
+footer .email {
+  display: flex;
+  gap: 1rem;
+}
+
+footer .phone img,
+footer .email img {
+  width: 20px;
+  height: 20px;
+}
+
+footer .icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+footer .icons > a {
+  width: 25px;
+  height: 25px;
+}
+
+footer .icons img {
+  width: 25px;
+  height: 25px;
+}
+
 @media screen and (max-width: 900px) {
   .about-me .image > header {
     bottom: auto;
@@ -259,7 +315,8 @@ main > section h1 {
 }
 
 @media screen and (max-width: 700px) {
-  main > section {
+  main > section,
+  footer {
     padding: 1rem 1rem 5rem;
   }
 
@@ -302,5 +359,11 @@ main > section h1 {
 
   .my-work > h1 {
     text-align: center;
+  }
+
+  footer {
+    padding-bottom: 1rem;
+
+    flex-direction: column;
   }
 }
