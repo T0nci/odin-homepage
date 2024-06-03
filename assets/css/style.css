@@ -260,7 +260,7 @@ main > section h1 {
 
 @media screen and (max-width: 700px) {
   main > section {
-    padding: 1rem;
+    padding: 1rem 1rem 5rem;
   }
 
   .about-me .image > header {
@@ -284,7 +284,8 @@ main > section h1 {
   .about-me > .content {
     margin-top: 0;
     margin-left: 0;
-    padding: 0.5rem; /* TODO: fix padding and remove box shadow */
+    padding: 0;
+    box-shadow: none;
   }
 
   .about-me > .content > *:not(.icons) {
