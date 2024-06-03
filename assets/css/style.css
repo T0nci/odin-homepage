@@ -86,27 +86,33 @@ body {
 .container {
   max-width: 1000px;
   margin: 0 auto;
-
-  position: relative; /* For the ::before part of .about-me section */
 }
 
 main > section {
-  padding: 2rem 3rem;
+  padding: 2rem 3rem 5rem;
+}
+
+header,
+main > section h1,
+main > section h2 {
+  font-family: "Playfair Display", sans-serif;
 }
 
 main > section h1 {
-  font-family: "Playfair Display", sans-serif;
   font-size: 2rem;
 }
 
-.about-me::before {
-  content: "";
+.about-me {
+  position: relative;
+}
+
+.about-me .diagonal {
   background-color: #0891b2;
   position: absolute;
   top: 0;
-  bottom: 0;
   left: 0;
   right: 0;
+  height: 45vh;
   z-index: -1;
   transform: skewY(-11deg) translateY(-6rem);
 }
@@ -119,7 +125,6 @@ main > section h1 {
 
 .about-me .image > header {
   color: white;
-  font-family: "Playfair Display", sans-serif;
   font-size: 2.75rem;
   text-align: center;
 
@@ -136,7 +141,7 @@ main > section h1 {
 
 .about-me > .content {
   background-color: #FFFFFF;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
   padding: 2rem 1.75rem;
   margin-top: 2rem;
 }
@@ -164,6 +169,71 @@ main > section h1 {
 .about-me .icons img {
   width: 20px;
   height: 20px;
+}
+
+.my-work > h1 {
+  margin-bottom: 1rem;
+}
+
+.my-work > .projects {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+  row-gap: 3rem;
+}
+
+.my-work .project {
+  max-width: 250px;
+  height: 280px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+.my-work .project .placeholder {
+  display: flex;
+  align-items: center;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 2rem;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #0891b2;
+  padding: 1rem 1.5rem;
+
+  /* only 2 things that matter when real image */
+  height: 160px;
+  width: auto;
+}
+
+.my-work .content {
+  padding: 0.5rem 1rem;
+}
+
+.my-work .content .header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-work .header h2 {
+  font-size: 1.1rem;
+  margin-right: auto;
+}
+
+.my-work .header a {
+  text-decoration: none;
+  width: 15px;
+  height: 15px;
+}
+
+.my-work .header a img {
+  width: 15px;
+  height: 15px;
+}
+
+.my-work .content p {
+  font-size: 0.8rem;
+  color: #5a5a5a;
 }
 
 @media screen and (max-width: 900px) {
@@ -214,7 +284,7 @@ main > section h1 {
   .about-me > .content {
     margin-top: 0;
     margin-left: 0;
-    padding: 0.5rem;
+    padding: 0.5rem; /* TODO: fix padding and remove box shadow */
   }
 
   .about-me > .content > *:not(.icons) {
@@ -227,5 +297,9 @@ main > section h1 {
 
   .about-me .icons {
     justify-content: center;
+  }
+
+  .my-work > h1 {
+    text-align: center;
   }
 }
